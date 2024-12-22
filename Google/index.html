@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#202124] w-full h-screen">
+    <main>
+        <header class="flex items-center justify-between px-8 text-white h-16">
+            <div>
+                <ul class="flex gap-5">
+                    <li><a class="hover:underline" href="#">About</a></li>
+                    <li><a class="hover:underline" href="#">Store</a></li>
+                </ul>
+            </div>
+    
+            <div>
+                <ul class="flex gap-5  items-center">
+                    <li><a class="hover:underline" href="#">Gmail</a></li>
+                    <li><a class="hover:underline" href="#">Images</a></li>
+                    <img class="w-[30px]" src="Images/apps.svg" alt="apps">
+                    <div class="avatar w-[40px] rounded-full">
+                        <img class="w-full rounded-full" src="Images/avatar.png" alt="avatar heycoders">
+                    </div>
+                </ul>
+                
+            </div>
+        </header>
+
+        <div class="google flex justify-center flex-col items-center">
+            <div class="logo mt-[200px]">
+                <img class="w-[272px]" src="Images/google-logo.png" alt="google logo">
+            </div>
+            <div class="search">
+                <div class="bg-[#4D5156] flex w-[584px] rounded-3xl items-center px-3 mt-5">
+
+                    <span><img class="w-[25px]" src="Images/Search.svg" alt="search"></span>
+
+                    <input id="search" class="w-full py-4 text-black bg-transparent px-5 outline-none border-none text-white" type="text" placeholder="">
+
+                   <div class="flex gap-4">
+                    <span><img class="w-[30px]" src="Images/mic.svg" alt="mic"></span>
+                    <span><img class="w-[30px]" src="Images/add-photo.svg" alt=""></span>
+                   </div>
+
+                </div>
+            </div>
+            <div class="flex gap-5 mt-5">
+                <a href="#" class="p-2 px-4 shadow-lg text-white hover:border-gray-400 rounded-lg bg-[#303134]" id="SearchBtn">Google Search</a>
+                <a href="#" class="p-2 px-4 shadow-lg text-white hover:border-gray-400 rounded-lg bg-[#303134]">I'm Feeling Lucky</a>
+            </div>
+            <div class="flex gap-2 mt-4">
+                <p class="text-gray-300">Google Offered in:</p>
+                <ul class="flex gap-2">
+                    <li><a class="text-blue-300 hover:underline" href="#">हिन्दी</a></li>
+                    <li><a class="text-blue-300 hover:underline" href="#">বাংলা</a></li>
+                    <li><a class="text-blue-300 hover:underline" href="#">తెలుగు</a></li>
+                    <li><a class="text-blue-300 hover:underline" href="#">मराठी</a></li>
+                    <li><a class="text-blue-300 hover:underline" href="#">தமிழ்</a></li>
+                    <li><a class="text-blue-300 hover:underline" href="#">ગુજરાતી</a></li>
+                    <li><a class="text-blue-300 hover:underline" href="#">ಕನ್ನಡ</a></li>
+                    <li><a class="text-blue-300 hover:underline" href="#">മലയാളം</a></li>
+                    <li><a class="text-blue-300 hover:underline" href="#">ਪੰਜਾਬੀ</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <footer class="bg-[#171717] w-full text-white absolute bottom-0 px-3 py-6">
+            <a href="#" class="ml-4">India</a>
+            <hr class="border-gray-600">
+            <div class="flex items-center justify-center gap-10 mt-6">
+                <ul class="flex gap-10">
+                    <li><a class="hover:underline " href="#">Advertising</a></li>
+                    <li><a class="hover:underline " href="#">Business</a></li>
+                    <li><a class="hover:underline " href="#">How search works</a></li>
+                </ul>
+
+                <ul class="flex gap-20 items-center">
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+
+            </div>
+            
+
+        </footer>
+    </main>    
+
+    <script>
+        const searchBox = document.getElementById("search")
+        const googleSearch = document.getElementById("SearchBtn")
+
+        googleSearch.addEventListener("click", function (){
+            var searchValue = searchBox.value;
+            window.open(`https://www.google.com/search?q=${searchValue}&newwindow=1&sca_esv=25db03e20fe2a1e6&sxsrf=ADLYWIK6ncAFYb3YxwgDRXUUX1cFLxNHuw%3A1734781903417&source=hp&ei=z6tmZ_ahF4ih1e8PhP7AwA0&iflsig=AL9hbdgAAAAAZ2a532mzVtD7c0hVptkPofWqHrZUMmbs&ved=0ahUKEwi2xfSY5riKAxWIUPUHHQQ_ENgQ4dUDCBk&uact=5&oqwelcome`)
+        })
+    </script>
+</body>
+</html>
